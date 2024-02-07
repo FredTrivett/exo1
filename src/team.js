@@ -26,13 +26,15 @@ function Team() {
         <ul className="gallery">
             {Employees.map((employee, index) => {
                 return (
-                    <Card
-                        key={index}
-                        imageSrc={employee.imageSrc}
-                        altText={employee.altText}
-                        name={employee.name}
-                        role={employee.role}
-                    />
+                    <li>
+                        <Card
+                            key={index}
+                            imageSrc={employee.imageSrc}
+                            altText={employee.altText}
+                            name={employee.name}
+                            role={employee.role}
+                        />
+                    </li>
                 );
             })}
         </ul>

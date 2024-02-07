@@ -4,7 +4,7 @@ const Card = (props) => {
     const { imageSrc, altText, name, role } = props;
 
     return (
-        <li className="gallery__pic">
+        <section className="gallery__pic">
             <img src={imageSrc} alt={altText} className="gallery__image" />
             <div className="gallery__div">
                 <img src="/bgshapes.svg" />
@@ -13,7 +13,7 @@ const Card = (props) => {
                     <h3 className="gallery__work">{role}</h3>
                 </div>
             </div>
-        </li>
+        </section>
     );
 };
 
