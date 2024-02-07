@@ -1,26 +1,22 @@
 import Card from './card';
 
-import Gilles from './images/gilles.jpg';
-import Amelie from './images/amelie.avif';
-import Edouard from './images/edouard.jpg';
-
 const Employees = [
     {
         name: "Édouard Jérémie",
         role: "CEO",
-        imageSrc: Edouard,
+        imageSrc: "/edouard.jpg",
         altText: "CEO"
     },
     {
         name: "Amélie Christelle",
         role: "Directeur des recherche",
-        imageSrc: Amelie,
+        imageSrc: "/amelie.avif",
         altText: "Employé 2"
     },
     {
         name: "Gilles Damien",
         role: "Directeur commercial",
-        imageSrc: Gilles,
+        imageSrc: "/gilles.jpg",
         altText: "Employé 3"
     }
 ];
