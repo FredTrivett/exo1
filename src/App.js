@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Card from './card';
+
+import './styles/base.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <section>
+      <header className="team__header">
+        <h2 className="team__title">Notre équipe</h2>
       </header>
-    </div>
+      <section className="team__content">
+        <h1 className="team__heading">Présentation de notre formidable équipe</h1>
+        <p className="team__description">Découvrez les esprits créatifs qui propulsent Auto Innovation vers de nouveaux sommets dans le monde de la conduite à hydrogène.</p>
+      </section>
+      <ul className="gallery">
+        <Card imageSrc={"./public/edouard.jpg"} altText={"CEO"} name={"Edouard"} role={"CEO"} />
+        <Card imageSrc={"./public/edouard.jpg"} altText={"CEO"} name={"Edouard"} role={"CEO"} />
+        <Card imageSrc={"./public/edouard.jpg"} altText={"CEO"} name={"Edouard"} role={"CEO"} />
+      </ul>
+    </section>
   );
 }
 
