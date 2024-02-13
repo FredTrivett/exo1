@@ -6,65 +6,22 @@ import './styles/base.css';
 const data = {
   Content: [
     {
-      title: "Notre équipe",
-      heading: "Présentation de notre formidable équipe",
-      description: "Découvrez les esprits créatifs qui propulsent Auto Innovation vers de nouveaux sommets dans le monde de la conduite à hydrogène."
+      title: "Prix et option à l'achat",
+      description: "Découvrez l'avenir de la mobilité avec des prix compétitifs et des options d'achat flexibles chez Auto Innovation."
     }
   ],
-  Employees: [
+  Card: [
     {
-      name: "Édouard Jérémie",
-      role: "CEO",
-      imageSrc: "/edouard.jpg",
-      altText: "CEO"
+      name: "Starter Package",
+      role: "29 999.99",
     },
     {
-      name: "Amélie Christelle",
-      role: "Directeur des recherche",
-      imageSrc: "/amelie.avif",
-      altText: "Employé 2"
+      name: "Standard Package",
+      role: "39 999.99",
     },
     {
-      name: "Gilles Damien",
-      role: "Directeur commercial",
-      imageSrc: "/gilles.jpg",
-      altText: "Employé 3"
-    }
-  ]
-};
-
-const data2 = {
-  Content: [
-    {
-      title: "Notre équipe 2",
-      heading: "Présentation de notre formidable équipe",
-      description: "Découvrez les esprits créatifs qui propulsent Auto Innovation vers de nouveaux sommets dans le monde de la conduite à hydrogène."
-    }
-  ],
-  Employees: [
-    {
-      name: "Gilles Damien",
-      role: "Directeur commercial",
-      imageSrc: "/gilles.jpg",
-      altText: "Employé 3"
-    },
-    {
-      name: "Gilles Damien",
-      role: "Directeur commercial",
-      imageSrc: "/gilles.jpg",
-      altText: "Employé 3"
-    },
-    {
-      name: "Gilles Damien",
-      role: "Directeur commercial",
-      imageSrc: "/gilles.jpg",
-      altText: "Employé 3"
-    },
-    {
-      name: "Gilles Damien",
-      role: "Directeur commercial",
-      imageSrc: "/gilles.jpg",
-      altText: "Employé 3"
+      name: "Premium Package",
+      role: "49 999.99",
     }
   ]
 };
@@ -74,8 +31,6 @@ const App = () => {
     <>
       <Team
         {...data}
-      /><Team
-        {...data2}
       />
     </>
   );
