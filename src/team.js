@@ -1,43 +1,31 @@
 import Card from './card';
 
-const Employees = [
-    {
-        name: "Édouard Jérémie",
-        role: "CEO",
-        imageSrc: "/edouard.jpg",
-        altText: "CEO"
-    },
-    {
-        name: "Amélie Christelle",
-        role: "Directeur des recherche",
-        imageSrc: "/amelie.avif",
-        altText: "Employé 2"
-    },
-    {
-        name: "Gilles Damien",
-        role: "Directeur commercial",
-        imageSrc: "/gilles.jpg",
-        altText: "Employé 3"
-    }
-];
+const Team = (data) => {
+    const { Content, Employees } = data;
+    const { title, heading, description } = Content[0];
 
-function Team() {
     return (
-        <ul className="gallery">
-            {Employees.map((employee, index) => {
-                return (
-                    <li>
+        <section>
+            <header className="team__header">
+                <h2 className="team__title">{title}</h2>
+            </header>
+            <section className="team__content">
+                <h1 className="team__heading">{heading}</h1>
+                <p className="team__description">{description}</p>
+            </section>
+            <ul className="gallery">
+                {Employees.map((employee) => (
+                    <li key={employee.name}>
                         <Card
-                            key={index}
                             imageSrc={employee.imageSrc}
                             altText={employee.altText}
                             name={employee.name}
                             role={employee.role}
                         />
                     </li>
-                );
-            })}
-        </ul>
+                ))}
+            </ul>
+        </section>
     );
 }
 

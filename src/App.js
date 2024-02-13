@@ -3,28 +3,81 @@ import Team from './team';
 
 import './styles/base.css';
 
-const Content = [
-  {
-    title: "Notre équipe",
-    heading: "Présentation de notre formidable équipe",
-    description: "Découvrez les esprits créatifs qui propulsent Auto Innovation vers de nouveaux sommets dans le monde de la conduite à hydrogène."
-  }
-];
+const data = {
+  Content: [
+    {
+      title: "Notre équipe",
+      heading: "Présentation de notre formidable équipe",
+      description: "Découvrez les esprits créatifs qui propulsent Auto Innovation vers de nouveaux sommets dans le monde de la conduite à hydrogène."
+    }
+  ],
+  Employees: [
+    {
+      name: "Édouard Jérémie",
+      role: "CEO",
+      imageSrc: "/edouard.jpg",
+      altText: "CEO"
+    },
+    {
+      name: "Amélie Christelle",
+      role: "Directeur des recherche",
+      imageSrc: "/amelie.avif",
+      altText: "Employé 2"
+    },
+    {
+      name: "Gilles Damien",
+      role: "Directeur commercial",
+      imageSrc: "/gilles.jpg",
+      altText: "Employé 3"
+    }
+  ]
+};
+
+const data2 = {
+  Content: [
+    {
+      title: "Notre équipe 2",
+      heading: "Présentation de notre formidable équipe",
+      description: "Découvrez les esprits créatifs qui propulsent Auto Innovation vers de nouveaux sommets dans le monde de la conduite à hydrogène."
+    }
+  ],
+  Employees: [
+    {
+      name: "Gilles Damien",
+      role: "Directeur commercial",
+      imageSrc: "/gilles.jpg",
+      altText: "Employé 3"
+    },
+    {
+      name: "Gilles Damien",
+      role: "Directeur commercial",
+      imageSrc: "/gilles.jpg",
+      altText: "Employé 3"
+    },
+    {
+      name: "Gilles Damien",
+      role: "Directeur commercial",
+      imageSrc: "/gilles.jpg",
+      altText: "Employé 3"
+    },
+    {
+      name: "Gilles Damien",
+      role: "Directeur commercial",
+      imageSrc: "/gilles.jpg",
+      altText: "Employé 3"
+    }
+  ]
+};
 
 const App = () => {
-  const { title, heading, description } = Content[0];
-
   return (
-    <section>
-      <header className="team__header">
-        <h2 className="team__title">{title}</h2>
-      </header>
-      <section className="team__content">
-        <h1 className="team__heading">{heading}</h1>
-        <p className="team__description">{description}</p>
-      </section>
-      <Team />
-    </section>
+    <>
+      <Team
+        {...data}
+      /><Team
+        {...data2}
+      />
+    </>
   );
 }
 
