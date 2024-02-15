@@ -1,38 +1,24 @@
-import React from 'react';
-import Team from './team';
+import './App.css'
+import Offers from './offers.js';
+import './styles/base.css'
 
-import './styles/base.css';
 
-const data = {
-  Content: [
-    {
-      title: "Prix et option à l'achat",
-      description: "Découvrez l'avenir de la mobilité avec des prix compétitifs et des options d'achat flexibles chez Auto Innovation."
-    }
-  ],
-  Card: [
-    {
-      name: "Starter Package",
-      role: "29 999.99",
-    },
-    {
-      name: "Standard Package",
-      role: "39 999.99",
-    },
-    {
-      name: "Premium Package",
-      role: "49 999.99",
-    }
-  ]
-};
-
-const App = () => {
+function App() {
   return (
-    <>
-      <Team
-        {...data}
-      />
-    </>
+    <section>
+
+      <div className="offer">
+        <div className="offer-section">
+          <h2 className="offer-section__title">Prix et option à l'achat</h2>
+          <p className="offer-section__description">Découvrez l'avenir de la mobilité avec des prix compétitifs et des
+            options d'achat flexibles chez Auto Innovation.</p>
+          <div className="box">
+            <Offers />
+          </div>
+        </div>
+      </div>
+
+    </section>
   );
 }
 
