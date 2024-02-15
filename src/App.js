@@ -2,33 +2,105 @@ import './App.css'
 import Offers from './offers.js';
 import './styles/base.css'
 
-
 function App() {
+
+  const data = [
+    {
+      title: "Premium",
+      price: "39,999",
+      features: [
+        {
+          text: "Service de diagnostic à distance",
+          checked: true
+        },
+        {
+          text: "Service de remplissage du réservoir",
+          checked: true
+        },
+        {
+          text: "Service de réparation à domicile",
+          checked: true
+        },
+        {
+          text: "Entretien régulier",
+          checked: true
+        },
+        {
+          text: "Recharge d'hydrogène illimité",
+          checked: true
+        },
+        {
+          text: "Service de remplacement de batterie",
+          checked: true
+        },
+        {
+          text: "Service de remplacement de pneus",
+          checked: false
+        },
+        {
+          text: "Service de remplacement de pneus",
+          checked: false
+        },
+        {
+          text: "Service de remplacement de pneus",
+          checked: false
+        },
+        {
+          text: "Service de remplacement de pneus",
+          checked: false
+        }
+      ]
+    },
+    {
+      title: "Prestige",
+      price: "49,999",
+      features: [
+        {
+          text: "Service de diagnostic à distance",
+          checked: true
+        },
+        {
+          text: "Service de remplissage du réservoir",
+          checked: true
+        },
+        {
+          text: "Service de réparation à domicile",
+          checked: true
+        },
+        {
+          text: "Entretien régulier",
+          checked: true
+        },
+        {
+          text: "Recharge d'hydrogène illimité",
+          checked: true
+        },
+        {
+          text: "Service de remplacement de batterie",
+          checked: true
+        },
+        {
+          text: "Service de remplacement de pneus",
+          checked: true
+        },
+        {
+          text: "Service de remplacement de pneus",
+          checked: true
+        },
+        {
+          text: "Service de remplacement de pneus",
+          checked: true
+        },
+        {
+          text: "Service de remplacement de pneus",
+          checked: true
+        }
+      ]
+    }
+  ];
+
   return (
-    <section>
-
-      <div className="offer">
-        <div className="offer-section">
-          <h2 className="offer-section__title">Prix et option à l'achat</h2>
-          <p className="offer-section__description">Découvrez l'avenir de la mobilité avec des prix compétitifs et des
-            options d'achat flexibles chez Auto Innovation.</p>
-
-          <div className='switch-container'>
-            <p className='switch-text'>Buy</p>
-            <label className="switch">
-              <input type="checkbox" />
-              <span className="slider round"></span>
-            </label>
-            <p className='switch-text'>Lease</p>
-          </div>
-
-          <div className="box">
-            <Offers />
-          </div>
-        </div>
-      </div>
-
-    </section>
+    <Offers ...{data} />
   );
 }
 

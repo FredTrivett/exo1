@@ -1,157 +1,38 @@
 import Card from './card.js';
 
+export default function Offers({ title, description, offers }) {
 
-const Starter = {
-    name: "Starter Package",
-    price: "29 999.99",
-    perks: [
-        {
-            text: "Assurance auto complémentaire",
-            checked: true
-        },
-        {
-            text: "Première recharge offerte",
-            checked: true
-        },
-        {
-            text: "Assurance contre le vol",
-            checked: true
-        },
-        {
-            text: "Service de rappel d'entretien",
-            checked: true
-        },
-        {
-            text: "Nettoyage hebdomadaire",
-            checked: false
-        },
-        {
-            text: "Service de diagnostic à distance",
-            checked: false
-        },
-        {
-            text: "Service de remplissage du réservoir",
-            checked: false
-        },
-        {
-            text: "Service de réparation à domicile",
-            checked: false
-        },
-        {
-            text: "Entretien régulier",
-            checked: false
-        },
-        {
-            text: "Recharge d'hydrogène illimité",
-            checked: false
-        }
-    ]
-};
-
-const Premium = {
-    name: "Premium Package",
-    price: "35 999.99",
-    perks: [
-        {
-            text: "Assurance auto complémentaire",
-            checked: true
-        },
-        {
-            text: "Première recharge offerte",
-            checked: true
-        },
-        {
-            text: "Assurance contre le vol",
-            checked: true
-        },
-        {
-            text: "Service de rappel d'entretien",
-            checked: true
-        },
-        {
-            text: "Nettoyage hebdomadaire",
-            checked: true
-        },
-        {
-            text: "Service de diagnostic à distance",
-            checked: true
-        },
-        {
-            text: "Service de remplissage du réservoir",
-            checked: true
-        },
-        {
-            text: "Service de réparation à domicile",
-            checked: false
-        },
-        {
-            text: "Entretien régulier",
-            checked: false
-        },
-        {
-            text: "Recharge d'hydrogène illimité",
-            checked: false
-        }
-    ]
-};
-
-const Prestige = {
-    name: "Prestige Package",
-    price: "49 999.99",
-    perks: [
-        {
-            text: "Assurance auto complémentaire",
-            checked: true
-        },
-        {
-            text: "Première recharge offerte",
-            checked: true
-        },
-        {
-            text: "Assurance contre le vol",
-            checked: true
-        },
-        {
-            text: "Service de rappel d'entretien",
-            checked: true
-        },
-        {
-            text: "Nettoyage hebdomadaire",
-            checked: true
-        },
-        {
-            text: "Service de diagnostic à distance",
-            checked: true
-        },
-        {
-            text: "Service de remplissage du réservoir",
-            checked: true
-        },
-        {
-            text: "Service de réparation à domicile",
-            checked: true
-        },
-        {
-            text: "Entretien régulier",
-            checked: true
-        },
-        {
-            text: "Recharge d'hydrogène illimité",
-            checked: true
-        }
-    ]
-};
-
-
-
-function Offers() {
+    let handler = function () {
+        console.log('clicked');
+    }
     return (
-        <>
-            <Card props={Starter} />
-            <Card props={Premium} />
-            <Card props={Prestige} />
-        </>
+
+        <section>
+
+            <div className="offer">
+                <div className="offer-section">
+                    <h2 className="offer-section__title">{title}</h2>
+                    <p className="offer-section__description">{description}</p>
+
+                    <div className='switch-container'>
+                        <p className='switch-text'>Buy</p>
+                        <label className="switch">
+                            <input onClick={handler} type="checkbox" />
+                            <span className="slider round"></span>
+                        </label>
+                        <p className='switch-text'>Lease</p>
+                    </div>
+
+                    <div className="box"><>
+                        <Card props={offers[0]} />
+                        <Card props={offers[1]} />
+                        <Card props={offers[2]} />
+                    </>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     );
 }
-
-export default Offers;
